@@ -1,0 +1,32 @@
+.app {
+  min-height: 100vh;
+  background-color: #151922;
+}
+
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Code comment divider before sections */
+section[data-section]::before {
+  content: attr(data-section);
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  color: #3b82f6;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 15px;
+  }
+}

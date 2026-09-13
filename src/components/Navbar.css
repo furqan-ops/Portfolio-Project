@@ -1,0 +1,94 @@
+.navbar {
+  background-color: #0f1419;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #1e293b;
+  backdrop-filter: blur(10px);
+  background-color: rgba(15, 20, 25, 0.95);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f8fafc;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 1px;
+}
+
+.navbar-logo:hover {
+  color: #3b82f6;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-menu a:hover {
+  color: #3b82f6;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.admin-link {
+  background-color: #3b82f6;
+  color: #151922 !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.admin-link:hover {
+  background-color: #60a5fa;
+}
+
+.admin-link::after {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 20px;
+    font-size: 13px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
